@@ -245,3 +245,41 @@ footer {
     margin-left: 0.75rem;
   }
 }
+
+
+/* Container for parallel images */
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+/* Individual figure / wrapper */
+.image-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Image behavior inside container */
+.image-item img {
+  width: 100%;
+  height: 200px;         /* Keeps all side-by-side images uniform */
+  object-fit: cover;     /* Prevents image distortion/stretching */
+  display: block;
+}
+
+/* Optional image captions */
+.image-caption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  color: #718096;
+  text-align: center;
+  background-color: #fafafa;
+  border-top: 1px solid #edf2f7;
+}
